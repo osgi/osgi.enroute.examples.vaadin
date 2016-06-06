@@ -1,0 +1,26 @@
+#
+# OSGI ENROUTE EXAMPLES VAADIN API
+#
+
+Bundle-Version:1.0.0.${tstamp}
+Bundle-Description: 				\
+	API for the OSGi enRoute Vaadin example. This API defines an Application that should be \
+	implemented by a Vaadin application and registered as service. This service is used \
+	to find the UI class and to also create instances. 
+
+	
+Export-Package:  \
+	osgi.enroute.examples.vaadin.api;provide:=true
+
+
+Require-Capability: \
+	compile-only
+
+-buildpath: \
+	osgi.enroute.base.api;version=1.0, \
+	com.vaadin.server,\
+	com.vaadin.shared,\
+	org.jsoup
+
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12

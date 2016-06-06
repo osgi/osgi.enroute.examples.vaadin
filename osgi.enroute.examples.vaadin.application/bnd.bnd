@@ -1,0 +1,28 @@
+#
+# OSGI ENROUTE EXAMPLES VAADIN APPLICATION APPLICATION
+#
+
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Description: \
+	A demo application for using OSGi enRoute and Vaadin
+
+Private-Package:  \
+	osgi.enroute.examples.vaadin.application
+
+Conditional-Package: aQute.lib*
+
+EnRoute-Application: 	osgi.enroute.examples.vaadin
+JPM-Command:			vaadin
+
+-includeresource: \
+	{readme.md}, \
+	{configuration=configuration}
+
+-buildpath: \
+	osgi.enroute.base.api,\
+	osgi.enroute.examples.vaadin.api;version=latest,\
+	com.vaadin.server,\
+	com.vaadin.shared,\
+	org.jsoup
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
