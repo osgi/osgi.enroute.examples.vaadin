@@ -15,6 +15,17 @@ import com.vaadin.ui.UI;
 import osgi.enroute.examples.vaadin.api.Application;
 
 @SuppressWarnings("serial")
+<<<<<<< HEAD
+@Component(
+		name = "osgi.enroute.vaadin.servlet", //
+		property = {
+				HttpWhiteboardConstants.HTTP_WHITEBOARD_SERVLET_PATTERN + "=/foo", 
+				Constants.SERVICE_RANKING + ":Integer=100" }, 
+				service = Servlet.class, 
+				configurationPolicy = ConfigurationPolicy.OPTIONAL, 
+				immediate = true)
+=======
+>>>>>>> 7eca93430356e47f51e67199a62fbfdfbdd7a54f
 @VaadinServletConfiguration(productionMode = false, ui = UI.class)
 public class VaadinOSGiServlet extends VaadinServlet {
 
