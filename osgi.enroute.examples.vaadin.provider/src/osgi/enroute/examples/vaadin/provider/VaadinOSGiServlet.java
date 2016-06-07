@@ -2,13 +2,7 @@ package osgi.enroute.examples.vaadin.provider;
 
 import java.util.Properties;
 
-import javax.servlet.Servlet;
-
-import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ConfigurationPolicy;
-import org.osgi.service.http.whiteboard.HttpWhiteboardConstants;
 
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.DefaultDeploymentConfiguration;
@@ -21,6 +15,7 @@ import com.vaadin.ui.UI;
 import osgi.enroute.examples.vaadin.api.Application;
 
 @SuppressWarnings("serial")
+<<<<<<< HEAD
 @Component(
 		name = "osgi.enroute.vaadin.servlet", //
 		property = {
@@ -29,6 +24,8 @@ import osgi.enroute.examples.vaadin.api.Application;
 				service = Servlet.class, 
 				configurationPolicy = ConfigurationPolicy.OPTIONAL, 
 				immediate = true)
+=======
+>>>>>>> 7eca93430356e47f51e67199a62fbfdfbdd7a54f
 @VaadinServletConfiguration(productionMode = false, ui = UI.class)
 public class VaadinOSGiServlet extends VaadinServlet {
 
