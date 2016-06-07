@@ -12,9 +12,9 @@ JPM-Command:					vaadin
 -runfw:						org.eclipse.osgi
 
 -runrequires: \
-	osgi.identity;filter:='(osgi.identity=osgi.enroute.examples.vaadin.application)',\
 	osgi.identity;filter:='(osgi.identity=com.vaadin.themes)',\
-	osgi.identity;filter:='(osgi.identity=com.vaadin.client-compiled)'
+	osgi.identity;filter:='(osgi.identity=com.vaadin.client-compiled)',\
+	osgi.identity;filter:='(osgi.identity=osgi.enroute.examples.vaadin.provider)'
 
 -runbundles: \
 	com.google.gwt.thirdparty.guava;version='[16.0.1,16.0.2)',\
@@ -35,5 +35,5 @@ JPM-Command:					vaadin
 	org.osgi.service.event;version='[1.3.1,1.3.2)',\
 	org.osgi.service.metatype;version='[1.3.0,1.3.1)',\
 	org.w3c.flute;version='[1.3.0,1.3.1)',\
-	osgi.enroute.examples.vaadin.application;version=snapshot,\
 	osgi.enroute.examples.vaadin.provider;version=snapshot
+-resolve: auto

@@ -20,11 +20,14 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.http.whiteboard.HttpWhiteboardConstants;
 
 @SuppressWarnings("serial")
-@Component(name = "osgi.enroute.vaadin.resources", //
-		property = {
-
-				HttpWhiteboardConstants.HTTP_WHITEBOARD_SERVLET_PATTERN + "=/VAADIN", Constants.SERVICE_RANKING
-						+ ":Integer=100" }, service = Servlet.class, configurationPolicy = ConfigurationPolicy.OPTIONAL, immediate = true)
+@Component(
+		name = "osgi.enroute.vaadin.resources", //
+		property = { 
+				HttpWhiteboardConstants.HTTP_WHITEBOARD_SERVLET_PATTERN + "=/VAADIN", 
+				Constants.SERVICE_RANKING + ":Integer=100" }, 
+		service = Servlet.class, 
+		configurationPolicy = ConfigurationPolicy.OPTIONAL, 
+		immediate = true)
 public class VaadinResources extends HttpServlet {
 	BundleContext context;
 

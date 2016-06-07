@@ -1,0 +1,39 @@
+#
+# OSGI ENROUTE EXAMPLES VAADIN ADDRESSBOOK APPLICATION APPLICATION
+#
+
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Description: \
+	This is the OSGI ENROUTE EXAMPLES VAADIN ADDRESSBOOK APPLICATION bundle.
+
+Private-Package: \
+	osgi.enroute.examples.vaadin.addressbook.application,\
+	org.apache.commons.beanutils.*
+
+EnRoute-Application: 	osgi.enroute.examples.vaadin.addressbook
+JPM-Command:			addrssb
+
+-includeresource: \
+	{readme.md}, \
+	{configuration=configuration}, \
+	{static=static}, \
+	web=web
+
+-buildpath: \
+	osgi.enroute.base.api,\
+	com.vaadin.server,\
+	com.vaadin.shared,\
+	org.jsoup,\
+	commons-beanutils__commons-beanutils,\
+	osgi.enroute.examples.vaadin.api;version=latest
+	
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
+Import-Package: \
+	,\
+	,\
+	*
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=osgi.enroute.examples.vaadin.addressbook.application)',\
+	osgi.identity;filter:='(osgi.identity=commons-collections__commons-collections)'
+-resolve: auto

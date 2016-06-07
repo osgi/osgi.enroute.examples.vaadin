@@ -1,0 +1,22 @@
+#
+# OSGI ENROUTE EXAMPLES VAADIN ADDRESSBOOK APPLICATION RUN SPECIFICATION
+#
+
+
+Bundle-Version:				1.0.0.${tstamp}
+Bundle-SymbolicName:		osgi.enroute.examples.vaadin.addressbook.application.launch
+JPM-Command:					addrssb
+
+
+-runfw:						org.eclipse.osgi
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=com.vaadin.themes)',\
+	osgi.identity;filter:='(osgi.identity=com.vaadin.client-compiled)',\
+	osgi.identity;filter:='(osgi.identity=osgi.enroute.examples.vaadin.provider)',\
+	osgi.identity;filter:='(osgi.identity=osgi.enroute.examples.vaadin.application)',\
+	osgi.identity;filter:='(osgi.identity=osgi.enroute.examples.vaadin.addressbook.application)',\
+	osgi.identity;filter:='(&(osgi.identity=commons-collections__commons-collections)(version>=20040616.0.0))'
+
+
+-resolve: auto

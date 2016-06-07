@@ -8,6 +8,8 @@ import javax.servlet.ServletException;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.http.HttpService;
 import org.osgi.service.http.NamespaceException;
 
@@ -19,12 +21,13 @@ public class VaadinApplicationHandler {
 	private HttpService http;
 
 	@Reference
-	void setHttpService( HttpService http ) {
+	void setHttpService(HttpService http) {
 		this.http = http;
 	}
 
-	@Reference
-	void addZApplication(Application<?> a, Map<String, Object> map, ServiceReference<?> ref) throws ServletException, NamespaceException {
+	@Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
+	void addZApplication(Application<?> a, Map<String, Object> map, ServiceReference<?> ref)
+			throws ServletException, NamespaceException {
 		try {
 			String alias = (String) map.get("alias");
 			VaadinOSGiServlet servlet = new VaadinOSGiServlet(a, ref);
