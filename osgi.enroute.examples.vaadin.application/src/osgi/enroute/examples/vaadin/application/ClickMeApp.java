@@ -16,7 +16,9 @@ import osgi.enroute.examples.vaadin.api.Application;
  * clicks.
  *
  */
-@Component(name = "osgi.enroute.examples.vaadin.clickme", property = "alias=/poo")
+@Component(
+	name = "osgi.enroute.examples.vaadin.clickme", 
+	property = "alias=/poo")
 public class ClickMeApp implements Application<ClickMeUI> {
 	AtomicInteger instance = new AtomicInteger();
 	AtomicInteger clicks = new AtomicInteger();
