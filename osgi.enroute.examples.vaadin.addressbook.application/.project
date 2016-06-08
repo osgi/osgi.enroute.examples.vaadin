@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>osgi.enroute.examples.vaadin.provider</name>
+	<name>osgi.enroute.examples.vaadin.addressbook.application</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -12,11 +12,6 @@
 		</buildCommand>
 		<buildCommand>
 			<name>bndtools.core.bndbuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.vaadin.integration.eclipse.addonStylesBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
