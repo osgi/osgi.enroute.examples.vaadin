@@ -13,9 +13,7 @@ JPM-Command:			addrssb
 
 -includeresource: \
 	{readme.md}, \
-	{configuration=configuration}, \
-	{static=static}, \
-	web=web
+	{configuration=configuration}
 
 -buildpath: \
 	osgi.enroute.base.api,\
