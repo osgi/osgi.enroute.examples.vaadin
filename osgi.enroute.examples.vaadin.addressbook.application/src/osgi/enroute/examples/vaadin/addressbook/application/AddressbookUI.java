@@ -92,7 +92,8 @@ public class AddressbookUI extends UI {
 		contactList.removeColumn("birthDate");
 		contactList.removeColumn("phone");
 		contactList.setSelectionMode(Grid.SelectionMode.SINGLE);
-		contactList.addSelectionListener(e -> contactForm.edit((Contact) contactList.getSelectedRow()));
+//		contactList.addSelectionListener(e -> contactForm.edit((Contact) contactList.getSelectedRow()));
+		// creates error, not finding contact
 		refreshContacts();
 	}
 
